@@ -1,0 +1,8 @@
+- hosts: terraform-asible
+  tasks:
+  - name: criando o HTML
+    copy:
+      dest: /home/ubuntu/index.html
+      content: <h1>Teste do ansible</h1>
+  - name: criando o servidor
+    shell: "nohup busybox httpd -f -p 8080 &"
